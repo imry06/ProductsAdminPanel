@@ -3,6 +3,7 @@ import './App.css'
 import AddProduct from './pages/AddProduct'
 import Dashboard from './pages/Dashboard'
 import EditProduct from './pages/EditProduct'
+import Products from './pages/Products'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <>
          {/* <Dashboard/> */}
          {/* <AddProduct/> */}
-         <EditProduct/>
+         {/* <EditProduct/> */}
+         <Products/>
     </>
   )
 }
