@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+/* ==========================
+   Container
+========================== */
+
+.edit-product{
+    width:min(1100px,95%);
+    margin:40px auto;
+    padding:35px;
+    border-radius:20px;
+    background:linear-gradient(145deg,#ffffff,#f8fbff);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.08),
+        0 5px 15px rgba(0,0,0,.05);
+}
+
+.edit-product h1{
+    text-align:center;
+    font-size:2rem;
+    color:#2563eb;
+    margin-bottom:30px;
+    position:relative;
+}
+
+.edit-product h1::after{
+    content:"";
+    width:90px;
+    height:4px;
+    border-radius:20px;
+    background:linear-gradient(to right,#2563eb,#60a5fa);
+    display:block;
+    margin:10px auto 0;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.edit-product form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.full-width{
+    grid-column:1/-1;
+}
+
+/* ==========================
+   Labels
+========================== */
+
+.form-group label{
+    margin-bottom:8px;
+    color:#334155;
+    font-weight:600;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px 16px;
+    border:2px solid #dbe4ee;
+    border-radius:12px;
+    background:#fff;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover{
+    border-color:#93c5fd;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 5px rgba(37,99,235,.15);
+}
+
+/* Disabled Product ID */
+
+.form-group input:disabled{
+    background:#f1f5f9;
+    color:#64748b;
+    cursor:not-allowed;
+}
+
+/* ==========================
+   Image Preview
+========================== */
+
+.image-preview{
+    grid-column:1/-1;
+
+    min-height:240px;
+
+    border:2px dashed #bfdbfe;
+    border-radius:15px;
+
+    background:#f8fbff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+}
+
+.image-preview:hover{
+    border-color:#2563eb;
+    background:#eff6ff;
+}
+
+.image-preview img{
+    max-width:220px;
+    max-height:220px;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.submit-btn{
+    grid-column:1/-1;
+
+    width:240px;
+    margin:auto;
+
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:white;
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+}
+
+.submit-btn:active{
+    transform:scale(.97);
+}
+
+/* ==========================
+   Placeholder
+========================== */
+
+::placeholder{
+    color:#94a3b8;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .edit-product{
+        margin:20px auto;
+        padding:20px;
+    }
+
+    .edit-product h1{
+        font-size:1.6rem;
+    }
+
+    .submit-btn{
+        width:100%;
+    }
+
+    .image-preview{
+        min-height:180px;
+    }
+
+    .image-preview img{
+        max-width:160px;
+    }
+}
