@@ -8,10 +8,12 @@ import {
   Boxes,
   ShoppingCart,
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 import "../css/dashboard.css";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard">
 
@@ -47,32 +49,32 @@ export default function Dashboard() {
 
       <div className="actions">
 
-        <button>
+        <button onClick={()=>navigate("/add-product")}>
           <Plus size={22} />
           Add Product
         </button>
 
-        <button>
+        <button onClick={()=>navigate("/edit-product")}>
           <Pencil size={22} />
           Edit Product
         </button>
 
-        <button>
+        <button onClick={()=>navigate("/delete-product")}>
           <Trash2 size={22} />
           Delete Product
         </button>
 
-        <button>
+        <button onClick={()=>navigate("/image-uploader")}>
           <ImagePlus size={22} />
           Upload Image
         </button>
 
-        <button>
+        <button onClick={()=>navigate("/price-update")}>
           <IndianRupee size={22} />
           Price Update
         </button>
 
-        <button>
+        <button onClick={()=>navigate("/stock-update")}>
           <Package size={22} />
           Stock Update
         </button>
